@@ -10,3 +10,22 @@ Code by jiapeiyang
 1098486124@qq.com
 http://www.freecodecamp.com/jiapeiyang
 */
+
+function convert(num) {
+  const romanNum = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+  const roman = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
+
+  let i = romanNum.length - 1
+  let str = ''
+
+  while (num > 0) {
+    if (num < romanNum[i]) {
+      i--
+    } else {
+      str += roman[i]
+      num -= romanNum[i]
+    }
+  }
+
+  return str
+}
