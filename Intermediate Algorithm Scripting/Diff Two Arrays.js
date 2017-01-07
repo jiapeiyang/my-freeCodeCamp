@@ -12,3 +12,14 @@ Code by jiapeiyang
 1098486124@qq.com
 https://freecodecamp.cn/jiapeiyang
 */
+// first method
+function diff(arr1, arr2) {
+  var newArr = arr1.concat(arr2);
+  return newArr.filter(function (item) {
+     if (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1) {
+       return item;
+     }
+  });
+}
+
+diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
